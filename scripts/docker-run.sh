@@ -20,4 +20,4 @@ container=$( docker run --name kubeweb \
 
 curl  http://localhost:$port/
 
-docker logs --follow $container
+

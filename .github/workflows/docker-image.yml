@@ -21,7 +21,7 @@ jobs:
     - name: List Docker images
       run: docker images
     - name: Run the Container
-      run: ./scripts/docker-run.sh
+      run: docker run -d -p 80:80 kubeweb
     - name: Docker process
       run: docker ps -a
 
