@@ -15,11 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag kubeweb:v1
     - name: List Docker images
       run: docker images
     - name: Run the Container
-      run: docker run -d -p 80:80 my-image-name:$(date +%s)
+      run: docker run -d -p 80:80 kubeweb:v1
     - name: Docker process
       run: docker ps -a
 
