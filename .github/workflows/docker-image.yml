@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag kubeweb:v1
+      run: docker build . --file Dockerfile --tag kubeweb
     - name: List Docker images
       run: docker images
     - name: Run the Container
