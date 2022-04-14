@@ -24,5 +24,7 @@ jobs:
       run: docker run -d -p 80:80 kubeweb
     - name: Docker process
       run: docker ps -a
+    - name: sleep
+      run: sleep 1000
 
 
