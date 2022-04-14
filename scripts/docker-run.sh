@@ -18,6 +18,6 @@ container=$( docker run --name kubeweb \
   --detach \
   kubeweb )
 
-open http://localhost:$port/
+xdg-open  http://localhost:$port/
 
 docker logs --follow $container
