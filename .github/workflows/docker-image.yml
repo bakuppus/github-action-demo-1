@@ -11,7 +11,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    environment:
+      name: production
+      url: http://dev.kubelancer.net
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
@@ -20,7 +22,6 @@ jobs:
       run: docker images
     - name: Run the Container
       run: ./scripts/docker-run.sh
-      url: https://dev.kubelancer.net
     - name: Docker process
       run: docker ps -a
 
